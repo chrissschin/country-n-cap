@@ -1,3 +1,23 @@
+
+header {
+  margin-bottom: 25px;
+  border-bottom: 3px solid black;
+}
+
 tr:hover {
   background-color: grey;
 }
+
+.home-btn {
+  margin-top: 50px;
+}
+
+.tablebox {
+  overflow: auto;
+  height: 38em;
+}
+
+/*.country-image {
+  width: 100px;
+  height:100px;
+}*/

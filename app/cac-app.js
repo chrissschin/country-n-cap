@@ -2,21 +2,27 @@
 
 
 angular.module("cac-app", ['ui.router'])
-  .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+  .config(['$stateProvider', '$urlRouterProvider',function($stateProvider, $urlRouterProvider) {
     $stateProvider
     .state('home', {
       url : '/',
       templateUrl : '/app/views/home.html'
     })
 
-    .state('countrylist', {
-      url : '/countrylist',
-      templateUrl : '/app/views/countrylist.html'
+    .state('countries', {
+      url : '/countries',
+      templateUrl : '/app/views/countries.html'
     })
 
-    .state('countrydetail', {
-      url : '/countrydetail',
-      templateUrl : '/app/views/countrydetail.html'
+    .state('countriesDetail', {
+      url : '/countries/:countryCode',
+      templateUrl : '/app/views/countriesDetail.html',
+      controller : 'secondCtrl',
+      params: {
+        country: {}
+      }
+
+
     })
 
     $urlRouterProvider.otherwise('/');

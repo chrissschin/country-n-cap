@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-sm-6">
+    <h1>{{ countryName }}</h1>
+    <h3>Population of Country: {{ population | number }}</h3>
+    <h3>Area in SqKm: {{ areaInSqKm | number}}</h3>
+    <h3>Capital: {{ capital }}</h3>
+    <h3>Population of Capital: {{ capitalPop | number }}</h3>
+    <h3>Neighbours:</h3><p ng-repeat="neighbour in neighbours  | limitTo: 3 ">{{ neighbour.countryName}}</p>
+    <a class="btn btn-primary" ui-sref="home">Home</a>
+    <a class="btn btn-primary" ui-sref="countries">Browse Countries</a>
+  </div>
+
+  <div class="col-sm-6">
+    <img class="img-responsive" src="http://www.geonames.org/flags/x/{{ countryCode | lowercase }}.gif" />
+    <img class="img-responsive" id='myImage' src="http://www.geonames.org/img/country/250/{{ countryCode | uppercase }}.png" />
+  </div>
+</div>
