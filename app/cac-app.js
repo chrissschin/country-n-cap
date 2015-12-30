@@ -1,7 +1,7 @@
 'use strict'
 
 
-angular.module("cac-app", ['ui.router'])
+angular.module("cac-app", ['ui.router','ngAnimate'])
   .config(['$stateProvider', '$urlRouterProvider',function($stateProvider, $urlRouterProvider) {
     $stateProvider
     .state('home', {

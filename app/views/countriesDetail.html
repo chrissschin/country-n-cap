@@ -5,7 +5,7 @@
     <h3>Area in SqKm: {{ areaInSqKm | number}}</h3>
     <h3>Capital: {{ capital }}</h3>
     <h3>Population of Capital: {{ capitalPop | number }}</h3>
-    <h3>Neighbours:</h3><p ng-repeat="neighbour in neighbours  | limitTo: 3 ">{{ neighbour.countryName}}</p>
+    <h3>3 Neighbours:</h3><p ng-repeat="neighbour in neighbours  | limitTo: 3 ">{{ neighbour.countryName}}</p>
     <a class="btn btn-primary" ui-sref="home">Home</a>
     <a class="btn btn-primary" ui-sref="countries">Browse Countries</a>
   </div>
